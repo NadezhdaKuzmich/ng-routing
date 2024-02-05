@@ -16,6 +16,10 @@ body {
   margin: auto;
 }
 
+section {
+  padding: 10px 0;
+}
+
 h1,
 h2 {
   text-align: center;
@@ -29,4 +33,30 @@ a {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.router-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: 600;
+  gap: 10px 20px;
+
+  a {
+    display: block;
+    min-width: 140px;
+    background: #142230;
+    border-radius: 8px;
+    border: 1px solid #282956;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: #8181dd;
 }

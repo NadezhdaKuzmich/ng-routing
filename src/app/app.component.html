@@ -1,21 +1,26 @@
 <div class="container">
-  <h1>Angular Routing</h1>
-  <nav>
-    <ul class="nav-links">
-      <li>
-        <a
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLinkActive="active"
-          routerLink=""
-        >
-          Home
-        </a>
-      </li>
-      <li><a routerLinkActive="active" routerLink="car">Car</a></li>
-      <li><a routerLinkActive="active" routerLink="devices">Devices</a></li>
-      <li><a routerLinkActive="active" routerLink="languages">Languages</a></li>
-    </ul>
-  </nav>
-
-  <router-outlet></router-outlet>
+  <header>
+    <h1>Angular Routing</h1>
+    <nav>
+      <ul class="router-links">
+        <li>
+          <a
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active"
+            routerLink=""
+          >
+            Home
+          </a>
+        </li>
+        <li><a routerLinkActive="active" routerLink="car">Car</a></li>
+        <li><a routerLinkActive="active" routerLink="devices">Devices</a></li>
+        <li>
+          <a routerLinkActive="active" routerLink="languages">Languages</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>
