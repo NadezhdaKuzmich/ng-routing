@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  color: #8181dd;
+  background: #010f1c;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+a {
+  color: #414283;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
