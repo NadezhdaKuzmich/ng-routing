@@ -7,6 +7,7 @@ import { LanguagesComponent } from './components/languages/languages.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AudiComponent } from './components/audi/audi.component';
 import { BmwComponent } from './components/bmw/bmw.component';
+import { AuthComponent } from '../auth/components/auth/auth.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,11 @@ const routes: Routes = [
       { path: 'bmw', component: BmwComponent },
     ],
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('../auth/auth.module').then((m) => m.AuthModule), // without import AuthModule in file app.module
+  },
+  // { path: 'auth', component: AuthComponent },
   { path: 'devices', component: DevicesComponent },
   { path: 'languages', component: LanguagesComponent },
   { path: '**', component: NotfoundComponent },
