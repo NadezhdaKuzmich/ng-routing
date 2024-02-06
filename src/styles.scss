@@ -7,7 +7,7 @@ body {
     "Lucida Sans", Arial, sans-serif;
   font-size: 18px;
   color: #8181dd;
-  background: #010f1c;
+  background: #0d121c;
 }
 
 .container {
@@ -44,17 +44,23 @@ ul {
   font-size: 20px;
   font-weight: 600;
   gap: 10px 20px;
+}
 
-  a {
-    display: block;
-    min-width: 140px;
-    background: #142230;
-    border-radius: 8px;
-    border: 1px solid #282956;
-    text-align: center;
-    padding: 20px 0;
-    cursor: pointer;
-  }
+.btn,
+.router-links a {
+  display: block;
+  min-width: 140px;
+  background: #142230;
+  border-radius: 8px;
+  border: 1px solid #282956;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.btn {
+  color: #414283;
+  padding: 20px 10px;
 }
 
 .active {

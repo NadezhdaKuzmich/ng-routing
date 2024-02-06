@@ -11,6 +11,5 @@ console.log('Module starts!');
 @NgModule({
   declarations: [AdminComponent, GuestComponent, AuthComponent],
   imports: [CommonModule, AuthRoutingModule],
-  exports: [AdminComponent, GuestComponent, AuthComponent],
 })
 export class AuthModule {}

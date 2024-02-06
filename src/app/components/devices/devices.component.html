@@ -1,3 +1,17 @@
 <section>
-  <h2>Devices</h2>
+  <h2>Indoor and outdoor Devices</h2>
+  <div class="set-btns">
+    <button
+      class="btn"
+      *ngFor="let dev of devices"
+      (click)="showDeviceDetails(dev)"
+    >
+      Go to {{ dev.device }} details...
+    </button>
+  </div>
+  <button class="btn centered" (click)="goToOutdoorDevices()">
+    Go to Outdoor devices
+  </button>
 </section>
+
+<router-outlet></router-outlet>
