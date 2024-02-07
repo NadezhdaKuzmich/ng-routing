@@ -1,0 +1,20 @@
+.router-links {
+  margin-bottom: 40px;
+}
+
+h3 {
+  color: #414283;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.set-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .btn {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

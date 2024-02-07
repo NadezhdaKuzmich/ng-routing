@@ -7,10 +7,10 @@ import { LanguagesComponent } from './components/languages/languages.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AudiComponent } from './components/audi/audi.component';
 import { BmwComponent } from './components/bmw/bmw.component';
-import { AuthComponent } from '../auth/components/auth/auth.component';
 import { OutdoorComponent } from './components/devices/components/outdoor/outdoor.component';
 import { IndoorComponent } from './components/devices/components/indoor/indoor.component';
 import { DeviseDetailsComponent } from './components/devices/components/devise-details/devise-details.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,7 +36,11 @@ const routes: Routes = [
       { path: 'indoor/:id', component: DeviseDetailsComponent },
     ],
   },
-  { path: 'languages', component: LanguagesComponent },
+  {
+    path: 'languages',
+    component: LanguagesComponent,
+    canActivate: [authGuard],
+  },
   { path: '**', component: NotfoundComponent },
 ];
 

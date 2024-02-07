@@ -10,7 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AudiComponent } from './components/audi/audi.component';
 import { BmwComponent } from './components/bmw/bmw.component';
-import { AuthModule } from '../auth/auth.module';
 import { IndoorComponent } from './components/devices/components/indoor/indoor.component';
 import { OutdoorComponent } from './components/devices/components/outdoor/outdoor.component';
 import { DeviseDetailsComponent } from './components/devices/components/devise-details/devise-details.component';

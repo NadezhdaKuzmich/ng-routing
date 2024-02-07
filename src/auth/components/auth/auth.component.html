@@ -8,5 +8,12 @@
       <a routerLinkActive="active" routerLink="guest">Guest</a>
     </li>
   </ul>
+
+  <router-outlet></router-outlet>
+
+  <h3>Login with Guard CanActivate<br />for Languages page</h3>
+  <div class="set-btns">
+    <button class="btn" (click)="logIn()">LogIn</button>
+    <button class="btn" (click)="logOut()">LogOut</button>
+  </div>
 </section>
-<router-outlet></router-outlet>

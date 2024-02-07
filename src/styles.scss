@@ -63,6 +63,17 @@ ul {
   padding: 20px 10px;
 }
 
+.btn,
+a {
+  transition: all .4s ease;
+} 
+
+.btn:hover,
+a:hover {
+  background: #6f6fc7;
+  color: #c8c8ef;
+}
+
 .active {
   color: #8181dd;
 }
