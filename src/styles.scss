@@ -65,13 +65,13 @@ ul {
 
 .btn,
 a {
-  transition: all .4s ease;
-} 
+  transition: all 0.4s ease;
+}
 
 .btn:hover,
 a:hover {
-  background: #6f6fc7;
   color: #c8c8ef;
+  background: #6f6fc7;
 }
 
 .active {

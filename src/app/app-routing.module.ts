@@ -11,6 +11,7 @@ import { OutdoorComponent } from './components/devices/components/outdoor/outdoo
 import { IndoorComponent } from './components/devices/components/indoor/indoor.component';
 import { DeviseDetailsComponent } from './components/devices/components/devise-details/devise-details.component';
 import { authGuard } from './auth.guard';
+import { leaveGuard } from './leave.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +19,11 @@ const routes: Routes = [
     path: 'car',
     component: CarComponent,
     children: [
-      { path: 'audi', component: AudiComponent },
+      {
+        path: 'audi',
+        component: AudiComponent,
+        canDeactivate: [leaveGuard],
+      },
       { path: 'bmw', component: BmwComponent },
     ],
   },

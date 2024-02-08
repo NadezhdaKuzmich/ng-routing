@@ -14,4 +14,8 @@ export class AudiComponent {
       tel: ['', [Validators.required, Validators.minLength(8)]],
     });
   }
+
+  handleSublit() {
+    this.form.reset()
+  }
 }

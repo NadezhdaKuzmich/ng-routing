@@ -1,3 +1,12 @@
 <h2>AUDI</h2>
 <form [formGroup]="form">
+  <div class="input-field">
+    <label for="name">Enter your name</label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+  <div class="input-field">
+    <label for="tel">Enter your telephone</label>
+    <input id="tel" type="text" formControlName="tel" />
+  </div>
+  <input class="btn" [disabled]="!form.valid" type="submit" value="Submit" (click)="handleSublit()"/>
 </form>
