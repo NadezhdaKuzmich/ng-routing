@@ -13,7 +13,9 @@
 
   <h3>Login with Guard CanActivate<br />for Languages page</h3>
   <div class="set-btns">
-    <button class="btn" (click)="logIn()">LogIn</button>
-    <button class="btn" (click)="logOut()">LogOut</button>
+    <button class="btn" [class.active]="isLogged" (click)="logIn()">
+      LogIn
+    </button>
+    <button class="btn" [class.active]="!isLogged" (click)="logOut()">LogOut</button>
   </div>
 </section>

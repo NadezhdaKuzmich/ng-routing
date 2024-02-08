@@ -5,7 +5,6 @@ import {
   RouterStateSnapshot,
 } from '@angular/router';
 import { AuthService } from './auth.service';
-import { Observable, delayWhen, interval } from 'rxjs';
 
 export const authGuard: CanActivateFn = (
   next: ActivatedRouteSnapshot,
@@ -14,3 +13,4 @@ export const authGuard: CanActivateFn = (
   const authService = inject(AuthService);
   return authService.isLoggedIn();
 };
+

@@ -8,12 +8,15 @@ import { AuthService } from '../../../app/auth.service';
 })
 export class AuthComponent {
   constructor(private authService: AuthService) {}
+  isLogged: boolean | undefined;
 
   logIn() {
     this.authService.logIn();
+    this.isLogged = this.authService.isLoggedIn();
   }
 
   logOut() {
     this.authService.logOut();
+    this.isLogged = this.authService.isLoggedIn();
   }
 }

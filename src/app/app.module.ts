@@ -13,6 +13,7 @@ import { BmwComponent } from './components/bmw/bmw.component';
 import { IndoorComponent } from './components/devices/components/indoor/indoor.component';
 import { OutdoorComponent } from './components/devices/components/outdoor/outdoor.component';
 import { DeviseDetailsComponent } from './components/devices/components/devise-details/devise-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,14 +27,16 @@ import { DeviseDetailsComponent } from './components/devices/components/devise-d
     BmwComponent,
     IndoorComponent,
     OutdoorComponent,
-    DeviseDetailsComponent
+    DeviseDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     // AuthModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
