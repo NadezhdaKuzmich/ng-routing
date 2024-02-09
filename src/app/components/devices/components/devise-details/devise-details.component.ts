@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { DevicesService } from '../../devices.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-devise-details',
@@ -14,13 +15,18 @@ export class DeviseDetailsComponent implements OnInit {
     private router: Router
   ) {}
 
-  id: number | undefined;
-  deviceName: any;
+  details$ = this.activatedRoute.data.pipe(map((data) => data?.['deviceInfo']));
 
-  ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((param: ParamMap) => {
-      this.id = Number(param.get('id'));
-      this.deviceName = this.deviceService.getDeviceById(this.id);
-    });
-  }
+  // without resolve guard:
+  // id: number | undefined;
+  // deviceName: any;
+
+  // ngOnInit(): void {
+  // this.activatedRoute.paramMap.subscribe((param: ParamMap) => {
+  //   this.id = Number(param.get('id'));
+  //   this.deviceName = this.deviceService.getDeviceById(this.id);
+  // });
+  // }
+
+  ngOnInit(): void {}
 }

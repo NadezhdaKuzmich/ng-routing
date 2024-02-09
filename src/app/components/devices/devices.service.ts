@@ -29,6 +29,6 @@ export class DevicesService {
   }
 
   getDeviceById(id: number) {
-    return this.getDevices().find((item) => item.id === id);
+    return this.getDevices().find((item) => item.id === +id);
   }
 }

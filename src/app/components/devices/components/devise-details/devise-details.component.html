@@ -1,3 +1,8 @@
-<div>
-  <h2>{{ deviceName.brand }} {{ deviceName.device }}</h2>
+<div *ngIf="details$ | async as dev">
+  <h2>{{ dev.brand }} {{ dev.device }}</h2>
 </div>
+
+<!-- template without resolve guard -->
+<!-- <div>
+  <h2>{{ deviceName.brand }} {{ deviceName.device }}</h2>
+</div> -->

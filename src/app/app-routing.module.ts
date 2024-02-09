@@ -12,6 +12,8 @@ import { IndoorComponent } from './components/devices/components/indoor/indoor.c
 import { DeviseDetailsComponent } from './components/devices/components/devise-details/devise-details.component';
 import { authGuard } from './auth.guard';
 import { leaveGuard } from './leave.guard';
+import { resolverGuard } from './resolver.guard';
+import { loadGuard } from './load.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,12 +40,18 @@ const routes: Routes = [
     children: [
       { path: 'outdoor', component: OutdoorComponent },
       { path: 'indoor', component: IndoorComponent },
-      { path: 'indoor/:id', component: DeviseDetailsComponent },
+      {
+        path: 'indoor/:id',
+        component: DeviseDetailsComponent,
+        resolve: { deviceInfo: resolverGuard },
+      },
     ],
   },
   {
     path: 'languages',
     component: LanguagesComponent,
+    loadChildren: () => import('./lang/lang.module').then((m) => m.LangModule),
+    canMatch: [loadGuard],
     canActivate: [authGuard],
   },
   { path: '**', component: NotfoundComponent },

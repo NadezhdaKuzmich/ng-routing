@@ -16,6 +16,6 @@ export class AudiComponent {
   }
 
   handleSublit() {
-    this.form.reset()
+    this.form.reset();
   }
 }

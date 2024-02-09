@@ -8,5 +8,11 @@
     <label for="tel">Enter your telephone</label>
     <input id="tel" type="text" formControlName="tel" />
   </div>
-  <input class="btn" [disabled]="!form.valid" type="submit" value="Submit" (click)="handleSublit()"/>
+  <input
+    class="btn"
+    [disabled]="!form.valid"
+    type="submit"
+    value="Submit"
+    (click)="handleSublit()"
+  />
 </form>
